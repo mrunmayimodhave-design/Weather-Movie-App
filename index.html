@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>SkyFlix | Weather & Movies</title>
+
+  <!-- Google Font -->
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a href="#home" class="logo">
+        ☁️ SkyFlix
+      </a>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#weather">Weather</a>
+        <a href="#movies">Movies</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="container hero-content">
+
+        <p class="eyebrow">
+          WEATHER • MOVIES • DISCOVERY
+        </p>
+
+        <h1>
+          Explore your world,
+          <span>one search at a time.</span>
+        </h1>
+
+        <p class="hero-text">
+          Check real-time weather information
+          and discover movies you may want to
+          watch next.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#weather"
+            class="btn primary"
+          >
+            Check Weather
+          </a>
+
+          <a
+            href="#movies"
+            class="btn secondary"
+          >
+            Explore Movies
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WEATHER SECTION
+    ========================== -->
+
+    <section
+      class="section weather-section"
+      id="weather"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            WEATHER
+          </p>
+
+          <h2>
+            What's the weather like?
+          </h2>
+
+          <p>
+            Search any city to get its current
+            weather information.
+          </p>
+
+        </div>
+
+
+        <!-- Weather Search -->
+
+        <form
+          id="weather-form"
+          class="search-form"
+        >
+
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Enter city name..."
+            autocomplete="off"
+          >
+
+          <button
+            type="submit"
+            class="btn primary"
+            id="weather-button"
+          >
+            Search
+          </button>
+
+        </form>
+
+
+        <!-- Weather Error / Message -->
+
+        <div
+          id="weather-message"
+          class="message"
+        ></div>
+
+
+        <!-- Weather Result -->
+
+        <div id="weather-result">
+
+          <div class="weather-placeholder">
+
+            <div class="placeholder-icon">
+              🌤️
+            </div>
+
+            <h3>
+              Search for a city
+            </h3>
+
+            <p>
+              Your current weather information
+              will appear here.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MOVIES SECTION
+    ========================== -->
+
+    <section
+      class="section movies-section"
+      id="movies"
+    >
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            MOVIE DISCOVERY
+          </p>
+
+          <h2>
+            Find something to watch.
+          </h2>
+
+          <p>
+            Search for movies and explore
+            their ratings, release dates and details.
+          </p>
+
+        </div>
+
+
+        <!-- Movie Search -->
+
+        <form
+          id="movie-form"
+          class="search-form"
+        >
+
+          <input
+            type="text"
+            id="movie-input"
+            placeholder="Search for a movie..."
+            autocomplete="off"
+          >
+
+          <button
+            type="submit"
+            class="btn primary"
+            id="movie-button"
+          >
+            Search Movies
+          </button>
+
+        </form>
+
+
+        <!-- Movie Error / Message -->
+
+        <div
+          id="movie-message"
+          class="message"
+        ></div>
+
+
+        <!-- Movie Results -->
+
+        <div
+          id="movie-results"
+          class="movie-grid"
+        ></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       MOVIE DETAILS MODAL
+  ========================== -->
+
+  <div
+    id="movie-modal"
+    class="modal"
+    aria-hidden="true"
+  >
+
+    <div class="modal-box">
+
+      <button
+        type="button"
+        id="modal-close"
+        class="modal-close"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div id="modal-content"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © 2026 SkyFlix
+      </p>
+
+      <p>
+        Weather & Movie Search App
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- JavaScript -->
+  <script
+    type="module"
+    src="main.js"
+  ></script>
+
+</body>
+</html>
